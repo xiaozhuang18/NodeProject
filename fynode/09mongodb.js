@@ -6,8 +6,10 @@ mongon命令行操作
     mongo --help  查看是否成功
     如果不成功那么要设置环境变量 我的电脑 右键 属性 高级系统设置 环境变量 添加 bin
     选择一个文件夹作为 mongo存储数据 db
-    mongod --dbpath 路径  指定一个文件夹作为服务端的  db文件夹出现一些文件表面成功
-    另起一个窗口  mongo 回车
+    mongod --dbpath C:\Users\14486\Desktop\demo\db   必须是绝对路径;
+        指定一个文件夹作为服务端的  db文件夹出现一些文件表面成功
+        启动成功就不要关闭这个窗口;
+    另起一个窗口  mongo 回车 输入以下命令
     show dbs
     db  查看当前表
     use local  没有表就创建 有就停留在该表
@@ -24,8 +26,9 @@ mongoose使用
     可视化工具 studio 3T 收费的 还是老老实实命令行查看吧;
 * */
 const mongoose = require("mongoose");
+console.log(mongoose);
 // 连接mongodb的服务器
-const db = mongoose.createCollection("mongodb://localhost:27017/fengyu",{
+const db = mongoose.createConnection("mongodb://localhost:27017/fengyu",{
     useNewUrlParser:true
 });
 // 用原声es6的promise取代mongodb的promise
