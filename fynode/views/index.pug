@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title pug
+        meta(charset="utf8")
+    body
+        - let flag = 0
+        div.luoheng#box index
+        div(class = flag? "box": "wrap",id="box")
+        - let bool = 1
+        div(class = bool? "box2": "wrap2")
