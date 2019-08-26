@@ -3,7 +3,6 @@
  */
 let http = require("http");
 let server = http.createServer((req,res) =>{
-    "use strict";
     res.writeHead(200,{"Content-type":"text/html; charset=utf-8"});
     res.write("范雨菲我爱你");
     console.log(req);

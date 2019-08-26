@@ -52,7 +52,7 @@ const javaScriptSchema = new Schema({
         default: "男"  // 设置默认值
     }
 });
-const JavaScript = db.model("javascript",javaScriptSchema); // 第一个参数集合名字
+const JavaScript = db.model("javascript",javaScriptSchema,"javascript"); // 第一个参数集合名字
 //
 const data1 = {
     name: "罗恒",
